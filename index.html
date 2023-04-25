@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="./js/script.js" type="module" defer></script>
+    
+    <title>BMI Calculator</title>
+</head>
+<body>
+    <div class="alert-error">
+        <p>
+            Type numbers only!
+        </p>
+    </div>
+    
+    <div class="container">
+        <main class="card">
+            
+            <form action="" id="form">
+                <h1 class="title">BMI Calculator</h1>
+                <div class="inputs">
+                    <div class="input-wrapper">
+                        <label for="weight">Weight (kg)</label>
+                        <input type="text" id="weight" placeholder="60">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="height">Height (cm)</label>
+                        <input type="text" id="height" placeholder="170">
+                    </div>
+                </div>
+                <button class="btnSubmit" type="sumbit">Calcule BMI <img src="/assets/arrow.svg" alt="right arrow"></button>
+            </form>
+            
+        </main>
+    </div>
+    
+    <div class="modal-wrapper">
+        <div class="modal card">
+            <h2 class="title">
+                <button class="close">
+                    <img src="/assets/close.svg" alt="close">
+                </button>
+                <span>Your BMI is 28</span>
+            </h2>
+        </div>
+    </div>
+</body>
+</html>

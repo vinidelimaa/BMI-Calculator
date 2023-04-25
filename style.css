@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --f1:'Roboto', sans-serif;
+}
+
+body {
+    background: #040924;;
+    font-family: var(--f1);
+    
+    position: relative;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+
+    min-width: 42.8rem;
+
+    background-color: #ffff;
+    margin-inline: auto;
+
+    padding: 4.8rem 6.4rem 6.4rem;
+    
+    border-radius: 6px;
+    box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-weight: 700;
+    font-size: 3.2rem;
+    color: #0C3440;
+    line-height: 4rem;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+
+    margin-top: 3.2rem;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+label {
+    font-weight: 400;
+    font-size: 1.4rem;
+
+}
+
+input {
+    padding: 1.6rem;
+    border-radius: .4rem;
+    border: 1px solid rgba(73, 80, 87, 0.3);    background: #DCE2E9;
+}
+
+form .btnSubmit {
+    cursor: pointer;
+
+    border: none;
+    background: #02799D;
+    border-radius: .4rem;
+    padding: 1.6rem;
+
+    color: #FFFF;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem;
+    margin-top: 3.2rem;
+
+    transition: background .3s;
+}
+
+form .btnSubmit:hover {
+    background: #00627f;
+    transform: scale(1.1);
+}
+
+/* modal */
+.modal-wrapper.open {
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+
+.modal-wrapper {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    display: none;
+}
+
+.modal {
+    position: relative;
+}
+
+.modal button {
+    background: none;
+    border: none;
+
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+
+    cursor: pointer;
+
+    transition: tranform .3s;
+}
+
+.modal button:hover {
+    transform: scale(1.1);
+}
+
+/* alert */
+.alert-error.open {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.alert-error {
+    position: absolute;
+    inset: 0;
+    background-color: #F03E3E;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 3.6rem;
+    padding: .8rem 0;
+    font-weight: bold;
+
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: transform .5s;
+}
+
+.alert-error p {
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #ffff;
+}
